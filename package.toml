@@ -3,6 +3,11 @@ use = "yazi-rs/plugins:full-border"
 rev = "1962818"
 hash = "ff0bcef016a061baa948d11194eea1d3"
 
+[[plugin.deps]]
+use = "yazi-rs/plugins:smart-enter"
+rev = "e84f4fe"
+hash = "3328f67bf1c335a76699ed794a4a41fd"
+
 [[flavor.deps]]
 use = "dangooddd/kanagawa"
 rev = "04985d1"

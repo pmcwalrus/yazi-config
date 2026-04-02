@@ -3,5 +3,28 @@ append_keymap = [
     { on = [ "g", "D" ], run = "cd 'D:\\'" },
     { on = [ "g", "C" ], run = "cd 'C:\\'" },
     { on = [ "g", "E" ], run = "cd 'E:\\'" },
-    { on = [ "g", "y" ], run = "cd C:\\Users/pmcwalrus/AppData/Roaming/yazi" }
+    { on = [ "g", "y" ], run = "cd C:/Users/pmcwalrus/AppData/Roaming/yazi" }
 ]
+
+[[mgr.prepend_keymap]]
+on   = "<Enter>"
+run  = "plugin smart-enter"
+desc = "Enter the child directory, or open the file"
+
+[[mgr.prepend_keymap]]
+on   = "!"
+for  = "unix"
+run  = 'shell "$SHELL" --block'
+desc = "Open $SHELL here"
+
+# If you also using Yazi on Windows:
+[[mgr.prepend_keymap]]
+on   = "!"
+for  = "windows"
+run  = 'shell "powershell.exe" --block'
+desc = "Open PowerShell here"
+
+[[input.prepend_keymap]]
+on   = "<Esc>"
+run  = "close"
+desc = "Cancel input"
